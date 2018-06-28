@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var observableModule = require("tns-core-modules/data/observable");
+var appSettings = require("tns-core-modules/application-settings");
+function PokemonDetailViewModel(pokemon) {
+    var currentKey = "VISITS_" + pokemon.number;
+    var visits = appSettings.getNumber(currentKey);
+    if (visits) {
+        visits = visits + 1;
+    }
+    else {
+        visits = 1;
+    }
+    appSettings.setNumber(currentKey, visits);
+    return observableModule.fromObject({
+        pokemon: pokemon,
+        visits: visits
+    });
+}
+exports.PokemonDetailViewModel = PokemonDetailViewModel;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9rZW1vbi1kZXRhaWwtdmlldy1tb2RlbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInBva2Vtb24tZGV0YWlsLXZpZXctbW9kZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxtRUFBcUU7QUFDckUsbUVBQXFFO0FBRXJFLGdDQUF1QyxPQUFPO0lBQzVDLElBQU0sVUFBVSxHQUFHLFlBQVUsT0FBTyxDQUFDLE1BQVEsQ0FBQztJQUM5QyxJQUFJLE1BQU0sR0FBRyxXQUFXLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQyxDQUFDO0lBQy9DLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUM7UUFDWCxNQUFNLEdBQUcsTUFBTSxHQUFHLENBQUMsQ0FBQztJQUN0QixDQUFDO0lBQUMsSUFBSSxDQUFDLENBQUM7UUFDTixNQUFNLEdBQUcsQ0FBQyxDQUFDO0lBQ2IsQ0FBQztJQUNELFdBQVcsQ0FBQyxTQUFTLENBQUMsVUFBVSxFQUFFLE1BQU0sQ0FBQyxDQUFDO0lBQzFDLE1BQU0sQ0FBQyxnQkFBZ0IsQ0FBQyxVQUFVLENBQUM7UUFDakMsT0FBTyxTQUFBO1FBQ1AsTUFBTSxRQUFBO0tBQ1AsQ0FBQyxDQUFDO0FBQ0wsQ0FBQztBQWJELHdEQWFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgb2JzZXJ2YWJsZU1vZHVsZSBmcm9tIFwidG5zLWNvcmUtbW9kdWxlcy9kYXRhL29ic2VydmFibGVcIjtcbmltcG9ydCAqIGFzIGFwcFNldHRpbmdzIGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL2FwcGxpY2F0aW9uLXNldHRpbmdzXCI7XG5cbmV4cG9ydCBmdW5jdGlvbiBQb2tlbW9uRGV0YWlsVmlld01vZGVsKHBva2Vtb24pIHtcbiAgY29uc3QgY3VycmVudEtleSA9IGBWSVNJVFNfJHtwb2tlbW9uLm51bWJlcn1gO1xuICBsZXQgdmlzaXRzID0gYXBwU2V0dGluZ3MuZ2V0TnVtYmVyKGN1cnJlbnRLZXkpO1xuICBpZiAodmlzaXRzKSB7XG4gICAgdmlzaXRzID0gdmlzaXRzICsgMTtcbiAgfSBlbHNlIHtcbiAgICB2aXNpdHMgPSAxO1xuICB9XG4gIGFwcFNldHRpbmdzLnNldE51bWJlcihjdXJyZW50S2V5LCB2aXNpdHMpO1xuICByZXR1cm4gb2JzZXJ2YWJsZU1vZHVsZS5mcm9tT2JqZWN0KHtcbiAgICBwb2tlbW9uLFxuICAgIHZpc2l0c1xuICB9KTtcbn1cbiJdfQ==

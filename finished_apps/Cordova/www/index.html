@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/onsenui.min.css">
+  <link rel="stylesheet" href="css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/onsenui.min.js"></script>
+  <title>Pokemon</title>
+</head>
+<body>
+
+<ons-navigator swipeable id="pokemonNavigator" page="page1.html"></ons-navigator>
+
+<template id="page1.html">
+  <ons-page id="master">
+    <ons-toolbar>
+      <div class="center">Tap a Pok&eacute;mon for details</div>
+    </ons-toolbar>
+
+    <div class="connection-offline" style="display: none">
+      You are offline. Images may not load.
+    </div>
+
+    <div class="segmented-bar">
+      <ons-segment id="sortingSegment" style="width: 75%">
+        <button>A - Z</button>
+        <button>Z - A</button>
+      </ons-segment>
+    </div>
+
+    <!-- placeholder for the pokemon list, rendered in js/app.js -->
+    <ons-list></ons-list>
+
+    <!--<ons-button id="push-button">Push page</ons-button>-->
+  </ons-page>
+</template>
+
+<template id="page2.html">
+  <ons-page id="detail">
+    <ons-toolbar>
+      <div class="left"><ons-back-button></ons-back-button></div>
+      <div class="center pokemon-name"></div>
+      <div class="right">
+        <ons-toolbar-button class="share-button">
+          Share
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+
+    <div class="pokemon-details">
+      <!-- TODO a nice (keyframe) animation.. with addClass in js? -->
+      <img class="pokemon-sprite pokemon-sprite-animation" src="about:blank">
+      <div class="pokemon-types"></div>
+    </div>
+  </ons-page>
+</template>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

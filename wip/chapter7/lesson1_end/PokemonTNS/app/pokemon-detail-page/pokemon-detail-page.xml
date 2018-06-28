@@ -1,0 +1,24 @@
+<Page class="page" 
+  xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+
+  <ActionBar class="action-bar">
+    <NavigationButton tap="onBackButtonTap" android.systemIcon="ic_menu_back" />
+    <Label text="{{ pokemon.name }}" />
+  </ActionBar>
+
+  <FlexboxLayout justifyContent="center">
+    <StackLayout verticalAlignment="middle">
+      <Label text="{{ 'VISITS ' + visits }}" />
+      <Image class="pokemon-sprite pokemon-sprite-animation" src="{{ pokemon.sprite }}" id="pokemonImage"/>
+      <Repeater items="{{ pokemon.types }}">
+        <Repeater.itemsLayout>
+          <FlexboxLayout class="container"/>
+        </Repeater.itemsLayout>
+        <Repeater.itemTemplate>
+          <Label class="pokemon-type" textWrap="true" text="{{ $value }}"/>
+        </Repeater.itemTemplate>
+      </Repeater>
+    </StackLayout>
+  </FlexboxLayout>
+
+</Page>

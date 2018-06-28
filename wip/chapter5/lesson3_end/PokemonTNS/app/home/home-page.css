@@ -1,0 +1,16 @@
+.connection-offline {
+  text-align: center;
+  padding: 8;
+  background-color: red;
+  color: white;
+}
+.segmented-bar {
+  margin-bottom: 20;
+}
+.segmented-bar-ios {
+  margin: 20;
+  width: 75%;
+}
+.pokemon-sprite {
+  background-color: #eee;
+}

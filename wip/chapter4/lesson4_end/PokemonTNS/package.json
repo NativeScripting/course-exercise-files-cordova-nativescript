@@ -1,0 +1,31 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.blankts",
+    "tns-android": {
+      "version": "4.1.2"
+    },
+    "tns-ios": {
+      "version": "4.1.0"
+    }
+  },
+  "dependencies": {
+    "nativescript-theme-core": "1.0.4",
+    "reflect-metadata": "0.1.12",
+    "rxjs": "6.2.0",
+    "tns-core-modules": "4.1.0",
+    "zone.js": "0.8.26"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "lazy": "1.0.11",
+    "nativescript-dev-typescript": "0.7.1",
+    "tns-platform-declarations": "3.4.1",
+    "typescript": "~2.7.2"
+  }
+}

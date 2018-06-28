@@ -1,0 +1,14 @@
+<Page navigatingTo="onNavigatingTo" class="page" 
+	xmlns="http://www.nativescript.org/tns.xsd">
+
+	<ActionBar title="Tap a Pokémon for details" class="action-bar">
+	</ActionBar>
+
+	<GridLayout rows="auto, auto, *">
+		<Label row="0" text="You are offline. Images may not load." />
+
+		<SegmentedBar row="1" items="{{ segmentedBarItems }}" selectedIndex="{{ selectedBarIndex }}" selectedIndexChanged="{{ onSortOrderChanged }}" />
+
+		<ListView row="2"></ListView>
+	</GridLayout>
+</Page>

@@ -1,0 +1,21 @@
+<Page navigatingTo="onNavigatingTo" class="page" 
+	xmlns="http://www.nativescript.org/tns.xsd">
+
+	<ActionBar title="Tap a Pokémon for details" class="action-bar">
+	</ActionBar>
+
+	<GridLayout rows="auto, auto, *">
+		<Label row="0" text="You are offline. Images may not load." class="connection-offline" />
+
+		<SegmentedBar row="1" android:class="segmented-bar" ios:class="segmented-bar-ios" items="{{ segmentedBarItems }}" selectedIndex="{{ selectedBarIndex }}" selectedIndexChanged="{{ onSortOrderChanged }}" />
+
+		<ListView row="2" class="list-group" items="{{ pokemon }}">
+			<ListView.itemTemplate>
+				<FlexboxLayout flexDirection="row" class="list-group-item">
+					<Image src="{{ sprite }}" class="pokemon-sprite thumb img-circle" />
+					<Label text="{{ name }}" class="pokemon-name" android:style="margin-top: 10" />
+				</FlexboxLayout>
+			</ListView.itemTemplate>
+		</ListView>
+	</GridLayout>
+</Page>
